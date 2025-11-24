@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Wireshark{% endblock title %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %} 
+    <style>
+        h3{
+            color:khaki;
+        }
+    </style>
+  <style>
+  .container{
+  text-align: center;
+  
+  }
+</style>
+    
+    <pre style="font-family:arial; text-align:center;">
+ <h3 >📌 Wireshark Nedir?</h3>
+<h5>- Wireshark, bir ağ protokolü analizörü (network protocol analyzer) olarak çalışır.
+- Ağ üzerinden geçen paketleri yakalar, detaylı şekilde inceler ve kullanıcıya anlaşılır bir arayüzde sunar.
+- Hem canlı trafik (real-time capture) hem de önceden kaydedilmiş paket dosyaları üzerinde analiz yapılabilir.<h5/>
+<h3>🎯 Ne Amaçla Kullanılır?</h3>
+<h5>
+1. Ağ Trafiğini İzleme
+- Ağdaki tüm paketleri yakalayarak kim, ne zaman, hangi protokolü kullanıyor görebilirsin.
+- TCP, UDP, HTTP, HTTPS, DNS, FTP gibi yüzlerce protokolü destekler.
+2. Sorun Giderme (Troubleshooting)
+- Ağda yavaşlık, bağlantı kopması veya hatalı paketler olduğunda sorun kaynağını bulmak için kullanılır.
+- Paketlerin içeriklerini inceleyerek hatalı yapılandırmaları tespit edebilirsin.
+3. Güvenlik Analizi
+- Şüpheli trafik, saldırı girişimleri veya zararlı yazılım iletişimini tespit etmek için kullanılır.
+- IDS/IPS sistemleriyle birlikte çalışarak güvenlik olaylarını doğrulamada yardımcı olur.
+4. Eğitim ve Öğrenme
+- Ağ protokollerinin nasıl çalıştığını öğrenmek isteyen öğrenciler için görsel ve pratik bir araçtır.
+- Paketlerin adım adım nasıl iletildiğini gözlemlemek mümkündür.<h5/>
+
+<h3>⚙️ Temel Özellikleri</h3>
+<h5>- Canlı paket yakalama ve filtreleme.
+- Protokol desteği: yüzlerce farklı protokolü tanır.
+- Detaylı analiz: paket başlıkları, payload ve meta veriler incelenebilir.
+- Grafiksel arayüz: kullanıcı dostu ve anlaşılır.
+- Kaydedilmiş dosya desteği: .pcap gibi formatları açıp analiz edebilir.<h5/>
+
+<h3>👨‍💻 Kimler Kullanır?</h3>
+<h5>- Ağ yöneticileri: performans ve sorun analizi için.
+- Siber güvenlik uzmanları: saldırı tespiti ve olay müdahalesi için.
+- Araştırmacılar ve öğrenciler: protokol öğrenimi ve pratik için. <h5/>
+
+<h3>🧩 Örnek Senaryo</h3>
+<h5>Bir şirket ağı yavaşladığında, Wireshark ile paketler yakalanır. Analiz sonucunda, bir kullanıcının sürekli
+büyük dosyalar indirdiği ve bant genişliğini tükettiği ortaya çıkar. Böylece sorun kaynağı hızlıca tespit edilir.<h5/>
+    
+        
+    </pre>    
+    
+    
+    
+    
+    
+    {% endblock content %}
+</body>
+</html>

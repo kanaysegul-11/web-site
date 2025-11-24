@@ -1,0 +1,69 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+  background-color: #1f1f1f;
+  border: none;
+  color: #ddd;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+a.nav-link:hover {
+  color: #0dcaf0 !important;
+}
+.comment-section {
+  width: 100%;
+  background-color: #1e1e1e; /* koyu zemin */
+  color: #fff;
+  padding: 40px 20px;
+  margin-top: 60px;
+  box-sizing: border-box;
+}
+
+.comment-section h4 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 10px;
+}
+
+.comment {
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+
+.comment:last-child {
+  border-bottom: none;
+}
+
+.comment-section form {
+  margin-top: 30px;
+}
+
+.comment-section input,
+.comment-section textarea {
+  width: 100%;
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-section button {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+}
+

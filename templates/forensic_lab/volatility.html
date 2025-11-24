@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Volatility{% endblock title %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> {% block content %}
+    <style>
+        h3{
+            color:khaki;
+        }
+    </style>
+    
+    <pre style="font-family: Arial, Helvetica, sans-serif; text-align: center;" >
+<h3>🧠 Volatility Framework Nedir?</h3>
+<h5>- Volatility, açık kaynaklı bir RAM bellek adli analiz aracıdır.
+- Bellek dökümlerini (memory dump) inceleyerek sistemde o anda çalışan süreçler, ağ bağlantıları,
+açık dosyalar, yüklü modüller gibi bilgileri çıkarır.
+- Python ile geliştirilmiştir ve modüler bir yapıya sahiptir.</h5>
+
+<h3>🎯 Adli Bilişimde Kullanım Amaçları</h3>
+<h5>- Bellek Analizi: RAM dump üzerinden çalışan programlar, servisler ve kullanıcı aktivitelerini incelemek.
+- Zararlı Yazılım Tespiti: Bellekte gizlenen rootkit, trojan veya keylogger gibi zararlı yazılımları ortaya çıkarmak.
+- Olay Müdahalesi (Incident Response): Bir saldırı sonrası sistemin o anki durumunu anlamak.
+- Adli Delil Toplama: Disk imajı yerine bellek imajı üzerinden delil elde etmek.
+- Adli Raporlama: Bellek analizi sonucunda elde edilen bulgular mahkemelerde delil olarak kullanılabilir.</h5>
+
+<h3>⚙️ Volatility’nin Sağladığı Bilgiler</h3>
+<h5>- Çalışan process listesi (hangi programlar aktifti)
+- Ağ bağlantıları (IP adresleri, portlar)
+- DLL ve modüller (hangi kütüphaneler yüklendi)
+- Komut geçmişi (cmd, powershell gibi)
+- Registry anahtarları
+- Şüpheli kod parçaları</h5>
+
+<h3>🧩 Örnek Senaryo</h3>
+<h5>Bir bilgisayarda zararlı yazılım şüphesi var. Disk imajında iz bulunamıyor. Ancak RAM dump Volatility ile incelendiğinde,
+gizlenmiş bir süreç (örneğin malware.exe) ve şüpheli ağ bağlantısı ortaya çıkıyor. Bu, saldırının kanıtı olarak rapora ekleniyor.</h5>
+
+    </pre>
+    {% endblock content %}
+</body>
+</html>

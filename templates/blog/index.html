@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Adli Bilişim Nedir?{% endblock %}
+{% block content %}
+<style>
+  h3{
+    text-align:center;
+    color:khaki;
+  }
+  h4{
+    text-align:center;
+    color:khaki;
+  }
+ p{
+  font-size:20px;
+ }
+ strong,h5{
+  color:khaki;
+ }
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.news-card {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card:hover {
+  transform: scale(1.02);
+}
+
+.news-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid #333;
+}
+
+.news-content {
+  padding: 1rem;
+}
+
+.news-content h3 {
+  font-size: 1rem;
+  color: #ffffffff;
+  margin-bottom: 0.5rem;
+}
+
+.news-content p {
+  font-size: 0.85rem;
+  color: #eeeeeeff;
+  margin-bottom: 0.8rem;
+}
+
+.news-content a {
+  font-size: 0.8rem;
+  color: #ffffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.comments-box {
+  position: relative;
+  border: 2px solid #f8f8f8ff;   /* dış çerçeve */
+  border-radius: 8px;
+  padding: 2rem 1rem 1rem 1rem;
+  color: #1081dd;
+}
+
+.comments-title {
+  position: absolute;
+  top: -14px;
+  left: 16px;
+  background-color: #1e2a38;
+  padding: 4px 12px;
+  border: 2px solid #fffffdff;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #ffd700;
+  display: flex;
+  align-items: center;
+  gap: 6px; /* ikon ile yazı arasında boşluk */
+}
+
+</style>
+<div class="container-lg;" style="max-width: 1000px; margin: 0 auto;">
+ <div class="containermt-4">
+  <!-- Yatay geçişli görseller -->
+  <div id="mainCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="2300">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/adli-bilisim.jpg' %}" class="d-block w-100 rounded" style="height: 400px; object-fit: cover;" alt="Adli Bilişim">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/forensic-tools.jpg' %}" class="d-block w-100 rounded" style="height: 400px; object-fit: cover;" alt="RAM Analizi">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/forensic.jpg' %}" class="d-block w-100 rounded" style="height: 400px; object-fit: cover;" alt="Network Forensics">
+    </div>
+  </div>
+ </div><br>
+
+
+  <!-- Yazı içeriği -->
+ 
+    <h3 class="mb-5" style="text-align: center; color: khaki;">Adli Bilişim (Digital Forensic) Nedir?</h3>
+    <p>Adli bilişim, elektromanyetik ve elektro-optik ortamlarda muhafaza edilen veya bu ortamlarca iletilen ses, görüntü, veri, bilgi veya bunların birleşiminden oluşan her türlü bilişim nesnesinin, mahkemede sayısal delil niteliği taşıyacak şekilde tanımlanması, elde edilmesi, saklanması, incelenmesi ve mahkemeye sunulması çalışmalarının bütünüdür.</p>
+
+    <h3 class="mt-5">Adli Bilişim İnceleme Süreçleri</h3>
+    <ul>
+      <li><p><strong>İlk Müdahale:</strong> Olayın aydınlatılmasını sağlayacak dijital delillerin belirlenmesi ve bu sistemlerin güvenliğinin sağlanması.</li></p>
+      <li><p><strong>Adli Kopya Elde Etme:</strong> Delil bütünlüğünü bozmayacak şekilde imaj alınması.</li></p>
+     <li> <p><strong>İnceleme:</strong> Elde edilen kopyalar üzerinden teknik analiz yapılması.</li></p>
+     <li> <p><strong>Raporlama:</strong> Bulguların anlaşılır biçimde sunulması.</li></p>
+    </ul>
+
+    <h3 class="mt-5">Adli Bilişim Türleri</h3>
+    <ul>
+      <li><p><strong>Bilgisayar Adli Bilişimi:</strong> Silinen dosyaların kurtarılması, log dosyalarının incelenmesi, sistem geçmişi analizi.</li></p>
+      <li><p><strong>Mobil Cihaz Adli Bilişimi:</strong> Uygulama kalıntıları, silinen dosyalar, servis sağlayıcı günlükleri.</li></p>
+      <li><p><strong>Memory Forensics:</strong> RAM üzerindeki uçucu verilerin analizi.</li></p>
+      <li><p><strong>Network Forensics:</strong> Ağ trafiği, saldırı analizi, veri tespiti.</li></p>
+    </ul>
+
+    <h3 class="mt-5">Türkiye’de ve Dünyada Adli Bilişim Uygulamaları</h3>
+    <p>Adli bilişim, Türkiye’de ve dünya genelinde emniyet birimleri, özel şirketler ve akademik kurumlar tarafından aktif olarak kullanılmaktadır. Bu alandaki gelişmeler, teknolojinin gelişmesiyle birlikte paralel biçimde artış göstermiştir.</p>
+    <p>Dünyada FBI, Europol, Interpol gibi uluslararası güvenlik kuruluşları, adli bilişim uzmanlarını suçluların dijital izlerini takip etmeleri ve suçları adalet önüne getirmeleri için kullanmaktadır.</p>
+    <p>Türkiye’de ise Siber Suçlarla Mücadele Daire Başkanlığı, 2016 yılında kurulmuş olup Emniyet Genel Müdürlüğü’ne bağlı olarak siber suçlarla mücadelede önemli bir rol üstlenmektedir.</p>
+
+    <h3 class="mt-5">Adli Bilişim Süreçleri Detaylı Açıklama</h3>
+    <h5>1) Delil Toplama</h5>
+    <p>Dijital ortamlarda gerçekleşen suçların kanıtlarının güvenli ve yasal olarak elde edilmesini kapsar. Bu süreç büyük bir titizlikle yürütülmelidir.</p>
+    <p><strong>Önemi:</strong> Dijital deliller kolayca değiştirilebilir, silinebilir, kaybolabilir. Yanlış yapılan bir işlem delilin geçersiz sayılmasına neden olabilir.</p>
+
+    <h5>2) Delil Analizi</h5>
+    <p>Toplanan dijital verilerin detaylı biçimde incelenerek suçla ilişkili olanların ortaya çıkarılmasıdır.</p>
+    <p><strong>Önemi:</strong> Gizlenmiş, silinmiş, şifrelenmiş verilerin ortaya çıkarılması; kimlik avı, yasa dışı işlemler gibi olayların aydınlatılması.</p>
+
+    <h5>3) Raporlama ve Hukuki Süreç</h5>
+    <p>Delil kaynağı, elde edilme yöntemi, analiz süreci ve sonuçlar açık ve sistematik biçimde belgelenmelidir. Mahkemelerde kullanılabilir olması için net bir dil şarttır.</p>
+
+    <h3 class="mt-4">Adli Bilişimde Kullanılan Araçlar</h3>
+    <h5>Yazılımsal Araçlar</h5>
+    <ul>
+      <li><p><strong>Autopsy:</strong> Açık kaynaklı, disk imajı inceleme, silinmiş veri kurtarma, zararlı yazılım analizi.</li></p>
+      <li><p><strong>FTK (Forensic Toolkit):</strong> Dijital delil analizinde kullanılır.</li></p>
+      <li><p><strong>EnCase:</strong> En yaygın kullanılan adli bilişim analiz aracıdır.</li></p>
+    </ul>
+
+    <h5>Donanımsal Araçlar</h5>
+    <ul>
+      <li><p><strong>Write Blocker:</strong> Sabit disklere müdahale etmeden kopyalama sağlar.</li></p>
+      <li><p><strong>Adli Kopyalama Cihazları:</strong> Disk imajı alma ve inceleme süreçlerinde kullanılır.</li></p>
+    </ul><br>
+
+<h4 class="mt-4" style="background-color:black; color: khaki;">📰 Milliyet Teknoloji Haberleri</h4>
+<div class="news-grid" style="background-color:black">
+{% for news in news_items %}
+  <div class="news-card">
+    <img src="{{ news.image }}" alt="Haber görseli">
+    <h3>{{ news.title }}</h3>
+    <p>{{ news.summary|truncatewords:20 }}</p>
+    <a href="{{ news.link }}" target="_blank">Devamını oku →</a>
+  </div>
+{% endfor %}
+</div>
+<div class="alert d-flex justify-content-between align-items-center" style="background-color:black">
+  <span style="font-size:25px;">Milliyet Teknoloji’den en güncel haberler</span>
+  <a href="https://www.milliyet.com.tr/teknoloji-haberleri/"
+     class="btn btn-outline-primary btn-sm" 
+     style="background-color:black; color:white;"
+     target="_blank">
+    Tüm Haberler →
+  </a>
+</div>
+ {% for comment in comments %}
+  <div class="comment mb-3 p-3 border rounded bg-dark text-light warn">
+    <strong class="warning">{{ comment.user.username|default:"Anonim" }}</strong><br>
+    <p>{{ comment.text }}</p>
+
+    {% for reply in comment.replies.all %}
+      <div class="reply mt-3 ms-3 mb-3  p-2 border-start border-primary">
+        ↳ <strong style="color:rgba(21, 85, 223, 1);">{{ reply.author }}</strong><br>
+        <p>{{ reply.text }}</p>
+      </div>
+    {% endfor %}
+
+    {% if user.is_authenticated %}
+      <form action="{% url 'blog:add_reply' comment.id %}" method="post" class="mt-2">
+        {% csrf_token %}
+        <textarea name="text" class="form-control mb-2" placeholder="Cevabınızı yazın..." required></textarea>
+        <button type="submit" style="background-color: khaki; color:black;" class="btn btn-sm btn-outline-light">Cevapla</button>
+      </form>
+    {% endif %}
+  </div>
+{% endfor %}
+
+<div class="comments-box mt-4">
+  <span class="comments-title" style="color: khaki;">💬 Yorumlar</span>
+
+  {% if user.is_authenticated %}
+    <div class="comment mb-3 p-3 bg-dark text-light rounded">
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" style="background-color: khaki; color:black;" class="btn btn-outline-light">Yorum Yap</button>
+      </form>
+    </div>
+  {% else %}
+    <p class="text-muted">Yorum yapmak için giriş yapmalısınız.</p>
+  {% endif %}
+</div>
+
+  {% endblock  %}

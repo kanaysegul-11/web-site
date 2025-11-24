@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Ftk İmager{% endblock title %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+  
+    {% block content %} 
+    <div class="container-lg;" style="max-width: 1100px; margin: 0 auto;">
+    <style>
+        .container{
+        text-align: center;
+  
+        }
+        h3{
+            color:khaki;
+        }
+    </style>
+<div class="container mt-5">
+
+   <pre style="font-family: Arial, Helvetica, sans-serif; text-align: center;" >
+
+
+<h3>📌 FTK Imager Nedir?</h3>
+<h5>- FTK (Forensic Toolkit) Imager, dijital adli bilişim süreçlerinde kullanılan bir yazılımdır.
+- “İmaj alma” işlemi, bir sabit diskin veya depolama ortamının birebir kopyasının çıkarılmasıdır. 
+   Bu sayede orijinal veriye dokunulmadan inceleme yapılır.
+- Program, Windows, Linux ve Mac sistemlerinde çalışır ve FAT, NTFS, ext2, ext3 gibi dosya sistemlerini destekler.</h5>
+
+<h3>🎯 Ne için Kullanılır?</h3>
+<h5>- Disk İmajı Alma: Sabit disk, CD/DVD, USB bellek veya klasörlerin birebir kopyasını çıkarır.
+- Veri İnceleme: Alınan imaj dosyaları (.dd, .e01, .AFF vb.) açılarak içerikleri incelenebilir.
+- Delil Bütünlüğü: Hash değerleri (MD5, SHA1) hesaplanarak imajın orijinal verilerle aynı olduğu doğrulanır.
+- Dosya Kurtarma: Silinmiş veya gizlenmiş dosyaları görüntüleme ve kurtarma imkânı sunar.
+- Ön İzleme: İmaj alınmadan önce diskin veya dosyanın içeriği hızlıca görüntülenebilir.</h5>
+
+<h3>⚙️ Temel Özellikleri</h3>
+<h5>- Çoklu format desteği: dd, e01, AFF formatlarında imaj alma.
+- Hash doğrulama: İmajın bütünlüğünü kanıtlamak için hash değerleri üretir.
+- Dosya sistemi desteği: FAT, NTFS, ext2/3 gibi yaygın sistemleri destekler.
+- Kullanıcı dostu arayüz: “Add Evidence Item” menüsü ile kolayca imaj ekleme ve inceleme yapılabilir.
+- Adli kullanım: Mahkemelerde delil olarak kullanılabilecek güvenilir imajlar oluşturur.</h5>
+
+👨‍💻 Kimler Kullanır?
+<h5>- Adli bilişim uzmanları: Dijital delil toplama ve inceleme için.
+- Bilgi güvenliği profesyonelleri: Veri kurtarma ve inceleme süreçlerinde.
+- Hukuk uygulayıcıları: Mahkemelerde delil sunmak için.
+- Araştırmacılar ve öğrenciler: Eğitim ve pratik amaçlı kullanım için.</h5>
+
+<h3>🧩 Örnek Senaryolar</h3>
+<h5>- Bir şirket bilgisayarında silinmiş dosyaların geri getirilmesi.
+- Bir siber suç soruşturmasında disk imajı alınarak delil incelemesi.
+- Bir öğrencinin adli bilişim dersinde imaj dosyası açıp dosya yapısını incelemesi.</h5></pre>
+{% endblock content %}
+</body>
+</html>

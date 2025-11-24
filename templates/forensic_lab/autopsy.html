@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Autopsy{% endblock title %}
+
+    {% block content %}
+    <div class="container-lg bg-" style="max-width: 1300px; margin: 0 auto; text-align: center;">
+      <style>
+        h3{
+            color:khaki;
+        }
+    </style>
+<div class="mt-2">
+    
+    <pre align="center" style="font-family:arial; "><h5>
+<h3>🧠 Autopsy Nedir?</h3>
+<h5>- Autopsy, The Sleuth Kit üzerine inşa edilmiş, grafik arayüze sahip bir dijital adli analiz aracıdır.
+- Windows, Linux ve macOS üzerinde çalışabilir.
+- Hem profesyonel adli bilişim uzmanları hem de öğrenciler tarafından kullanılır.</h5>
+
+<h3>🎯 Ne Amaçla Kullanılır?</h3>
+<h5>1. Disk İmajı Analizi
+- dd, E01 gibi imaj dosyalarını açarak dosya sistemi üzerinde detaylı inceleme yapılmasını sağlar.
+- FAT, NTFS, ext gibi dosya sistemlerini destekler.
+2. Silinmiş Dosya Kurtarma
+- Silinmiş dosyaları ve klasörleri tespit edip kurtarabilir.
+- Dosya meta verilerini (oluşturulma tarihi, erişim zamanı vb.) görüntüleyebilir.
+3. Zararlı Yazılım Tespiti
+- Şüpheli dosyaları ve davranışları analiz ederek kötü amaçlı yazılımları belirleyebilir.
+- Özellikle olay müdahalesi (incident response) süreçlerinde kullanılır.
+4. Zaman Çizelgesi Oluşturma
+- Sistem üzerindeki olayları zaman sırasına göre sıralayarak adli analiz için zaman çizelgesi çıkarır.
+- Bu özellik, olayların ne zaman gerçekleştiğini anlamada kritiktir.
+5. Adli Raporlama
+- İnceleme sonuçlarını rapor haline getirerek mahkemelerde delil olarak sunulabilir.
+- HTML veya PDF formatında dışa aktarım yapılabilir.</h5>
+
+<h3>🧩 Autopsy'nin Avantajları</h3>
+<h5>- Ücretsiz ve açık kaynaklıdır.
+- Kullanıcı dostu grafik arayüz sayesinde teknik olmayan kullanıcılar bile rahatlıkla kullanabilir.
+- Modüler yapı ile eklentilerle genişletilebilir (örn. e-posta analiz modülü, EXIF görüntüleme modülü).
+- Topluluk desteği sayesinde sürekli güncellenir ve geliştirilmeye açıktır.</h5>
+
+<h3>👨‍💻 Kimler Kullanır?</h3>
+<h5>- Adli bilişim uzmanları
+- Siber güvenlik analistleri
+- Hukuk uygulayıcıları
+- Üniversite öğrencileri ve akademisyenler</h5>
+
+<h3>🔍 Örnek Senaryo</h3>
+<h5>Bir siber saldırı sonrası ele geçirilen diskin imajı Autopsy ile açılır. Silinmiş dosyalar kurtarılır,
+zararlı yazılımın bulaşma zamanı zaman çizelgesiyle tespit edilir ve tüm bulgular bir adli rapor olarak dışa aktarılır.</h5></pre>
+
+</div> 
+    
+</div>
+    
+    {% endblock content %}

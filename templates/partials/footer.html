@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      a.text-light:hover{
+        color: #0dcaf0;
+      }
+    </style>
+</head>
+<body>
+     <footer class="bg-dark text-light pt-5 pb-4">
+  <div class="container text-md-start text-center">
+    <div class="row">
+      <!-- Hakkımızda -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">Adli Bilişim Platformu</h5>
+        <p>Adli bilişim ve siber güvenlik alanında uzman ekibimiz, dijital delil inceleme, olay müdahalesi ve güvenlik danışmanlığı hizmetleri sunmaktadır.</p>
+        <p class="small text-muted">© 2025 Adli Bilişim Platformu - Tüm Hakları Saklıdır.</p>
+      </div>
+
+      <!-- İletişim -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">İletişim</h5>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-geo-alt-fill me-2"></i>Üsküdar, İstanbul, Türkiye</li>
+          <li><i class="bi bi-envelope-fill me-2"></i><a href="mailto:info@adlibilisim.com" class="text-light text-decoration-none">info@adlibilisim.com</a></li>
+          <li><i class="bi bi-telephone-fill me-2"></i><a href="tel:+905555555555" class="text-light text-decoration-none">+90 555 555 55 55</a></li>
+        </ul>
+      </div>
+
+      <!-- Bağlantılar -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">Bağlantılar</h5>
+        <ul class="list-unstyled">
+          <li><a href="{% url "blog:about" %}" class="text-light text-decoration-none">Hakkımızda</a></li>
+          <li><a href="{% url "blog:proje" %}" class="text-light text-decoration-none">Projeler</a></li>
+          <li><a href="{% url "blog:makale" %}" class="text-light text-decoration-none">Makaleler</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sosyal Medya -->
+    <div class="row mt-4 justify-content-center">
+      <div class="col-auto">
+        <a href="https://www.facebook.com/" class="text-light me-3"><i class="bi bi-facebook fs-5"></i></a>
+        <a href="https://x.com/?lang=tr" class="text-light me-3"><i class="bi bi-twitter fs-5"></i></a>
+        <a href="https://www.instagram.com/" class="text-light me-3"><i class="bi bi-instagram fs-5"></i></a>
+        <a href="https://tr.linkedin.com/" class="text-light me-3"><i class="bi bi-linkedin fs-5"></i></a>
+        <a href="https://github.com/" class="text-light"><i class="bi bi-github fs-5"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    </body>
+</html>

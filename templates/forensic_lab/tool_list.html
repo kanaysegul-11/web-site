@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Adli Bilişim Araçları{% endblock %}
+{% block content %}
+<style>
+  .container{
+  text-align: center;
+  }
+  .tool-box {
+  border-radius: 8px;
+  padding: 30px;
+  margin: 20px;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 15px rgba(240, 240, 153, 0.836); /* açık sarı ışık efekti */
+  }
+
+  .tool-box:hover { 
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgba(240, 240, 153, 0.836);
+    background-color: #495057; /* daha koyu gri hover efekti */
+  }
+
+  .tool-box img {
+    transition: transform 0.3s ease;
+  }
+
+  .tool-box:hover img {
+    transform: scale(1.1);
+  }
+</style>
+<div class="container mt-3 ">
+  <h2 style="text-align: center; color: khaki;">🔧 Adli Bilişim Araçları</h2>
+  <div class="row justify-content-center">
+   {% for tool in tools %}
+      <div class="col-5 mt-3"> 
+        <div class="bg-secondary p-3 rounded shadow-sm  tool-box"> 
+         <img src="{% static tool.image %}" style="height:120px; width:150px; object-fit:cover;" class="p-2" alt="{{ tool.name }}"><br>
+
+        <h4> {{ tool.name }}</h4>  <p style="text-align:center;"><h6>{{ tool.desc }}</h6></p>
+       
+        <a  href="{% url 'forensic_lab:tool_detail' tool.slug %}" class="btn btn-outline-dark" >Devamını Oku</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ tool.name }}{% endblock %}
+{% block content %}
+<div class="container mt-4">
+  <h2>{{ tool.name }}</h2>
+  <p class="text-muted">{{ tool.desc }}</p>
+  <div class="bg-light p-3 rounded shadow-sm">
+    {{ tool.details|linebreaks }}
+  </div>
+  <a href="{% url 'forensic_lab:tool_list' %}" class="btn btn-secondary mt-3">← Geri Dön</a>
+</div>
+{% endblock %}
